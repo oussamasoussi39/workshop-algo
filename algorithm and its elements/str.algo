@@ -1,0 +1,22 @@
+ALGORITHM sentence_count (ch)
+VAR
+   count_characters, count_words ,count_vowels:INTEGER:=0;
+   tab: array of chars [5];
+BEGIN
+    tab:=[a,e,o,u,i];
+    FOR i from 0 to ch.length-2 STEP 1 DO 
+     IF (ch[i]==" ") THEN
+     count_words:=count_words+1;
+     END_IF;
+     IF (ch[i] in tab) THEN
+     count_vowels:=count_vowels+1;
+     END_IF;
+     IF (ch[i]<> " ") THEN
+     count_characters:=count_characters+1;
+     END_FOR;
+     
+    WRITE ("Number of words: ", count_words);
+    WRITE ("Number of characters: ", count_characters);
+    WRITE ("Number of vowels: ", count_vowels);
+
+END
