@@ -1,0 +1,35 @@
+PROCEDURE DOT_PRODUCT(v1,v2: ARRAY_OF FLOAT , VAR ps:FLOAT)
+VAR
+    i:INTEGER
+BEGIN
+ps:=0;
+    WHILE (v1.length <> v2.length) DO
+        ps:= NAN ;
+    END_WHILE
+    FOR i FROM 0 TO v1.length STEP 1  DO
+        ps:=ps+v1[i]*v2[i];
+    END_FOR
+END
+ALGORITHM check_orthogonality
+VAR
+    i,n,m:INTEGER;
+    ps: FLOAT;
+    v1,v2:ARRAY_OF FLOAT;
+BEGIN
+    READ (n);
+    READ (m);
+    FOR i FROM 0 TO n-1 STEP 1 DO
+        READ (v1[i])
+    END_FOR
+    FOR i FROM 0 TO m-1 STEP 1 DO
+        READ (v2[i])
+    END_FOR
+   DOT_PRODUCT(v1,v2, ps)
+   IF (ps =0) THEN
+   write("v1 and v2 are orthogonal") 
+   
+   ELSE
+    write("v1 and v2 are NOT orthogonal") 
+   END_IF
+
+END
