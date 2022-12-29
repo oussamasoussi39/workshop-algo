@@ -1,0 +1,23 @@
+ALGORITHM sorting_cards
+VAR
+    arr : ARRAY_OF INTEGER ;
+    i,n,a: INTEGER ;
+BEGIN
+
+     READ (n) ;
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        READ (arr[i]);
+    END_FOR;
+    FOR i FROM 1 TO n-1 STEP 1  DO
+    a:=arr[i];
+    j:=i;
+    WHILE (j>=1) AND (a > arr[j-1]) DO
+        arr[j]:= arr[j-1];
+        j:=j-1;
+    END_WHILE;
+    arr[j]:= a
+    END_FOR
+    
+END
+
+ 
