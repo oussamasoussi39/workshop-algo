@@ -1,0 +1,20 @@
+{
+  "name": "mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "myscript": "cp ./.env.local .env && node ./scripts/myscript.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongodb": "^5.0.1",
+    "mongoose": "^6.9.1",
+    "path": "^0.12.7"
+  }
+}
